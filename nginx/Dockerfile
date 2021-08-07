@@ -3,5 +3,3 @@ FROM nginx:1.21
 MAINTAINER Sergei_Kuzmin1@epam.com
 
 COPY nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 5000
