@@ -4,7 +4,7 @@ services:
     build: ./nginx
     container_name: webapp-nginx
     volumes:
-    - ./html:/var/www/html/
+    - ./html:/usr/share/nginx/html
     ports:
     - "8080:80"
     mem_limit: 512m
