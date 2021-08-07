@@ -6,11 +6,13 @@ services:
     ports:
     - 8080:80
     networks:
-      - nginx
+      bridge:
+        - nginx
   httpd:
     image: ./httpd
     container_name: webapp-httpd
     ports:
     - 9090:80
     networks:
-      - httpd
+      bridge:
+        - httpd
