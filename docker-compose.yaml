@@ -7,6 +7,8 @@ services:
     - ./html:/var/www/html/
     ports:
     - "8080:80"
+    mem_limit: 512M
+    cpu_quota: 2
   httpd:
     build: ./httpd
     container_name: webapp-httpd
@@ -14,3 +16,5 @@ services:
     - ./html:/var/www/html/
     ports:
     - "9090:80"
+    mem_limit: 512M
+    cpu_quota: 2
