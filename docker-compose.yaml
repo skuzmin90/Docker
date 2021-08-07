@@ -1,12 +1,12 @@
 version: "2"
 services:
   nginx:
-    image: ./nginx
+    build: ./nginx
     container_name: webapp-nginx
     ports:
     - 8080:80
   httpd:
-    image: ./httpd
+    build: ./httpd
     container_name: webapp-httpd
     ports:
     - 9090:80
