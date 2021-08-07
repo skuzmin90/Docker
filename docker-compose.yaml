@@ -1,12 +1,17 @@
-version: "2"
+version: "3"
 services:
   nginx:
     build: ./nginx
     container_name: webapp-nginx
+    volumes:
+    - static-content:/var/www/html/
     ports:
-    - 8080:80
+    - "8080:80"
   httpd:
     build: ./httpd
     container_name: webapp-httpd
+    - static-content:/var/www/html/
     ports:
-    - 9090:80
+    - "9090:80"
+volumes:
+  static-content: ./html
