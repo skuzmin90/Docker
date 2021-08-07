@@ -1,0 +1,18 @@
+version: "2"
+services:
+  nginx:
+    build:
+      - ./nginx
+    container_name: webapp-nginx
+    ports:
+    - 8080:80
+    networks:
+      - nginx
+  httpd:
+    build:
+      - ./httpd
+    container_name: webapp-httpd
+    ports:
+    - 9090:80
+    networks:
+      - httpd
