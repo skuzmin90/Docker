@@ -9,7 +9,7 @@ services:
     - "8080:80"
     mem_limit: 512m
     mem_reservation: 128M
-    cpus: '0,5'
+    cpus: 0.5
   httpd:
     build: ./httpd
     container_name: webapp-httpd
@@ -19,4 +19,4 @@ services:
     - "9090:80"
     mem_limit: 512m
     mem_reservation: 128M
-    cpus: '0,5'
+    cpus: 0.5
