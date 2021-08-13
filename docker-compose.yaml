@@ -11,8 +11,8 @@ services:
     mem_reservation: 128M
     cpus: 0.5
   httpd:
-    build: ./httpd
-    container_name: webapp-httpd
+    build: apache
+    container_name: webapp-apache
     volumes:
     - ./html:/var/www/html/
     ports:
