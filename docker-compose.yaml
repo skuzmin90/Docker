@@ -12,6 +12,7 @@ services:
     mem_limit: 512m
     mem_reservation: 128M
     cpus: 0.5
+
   httpd:
     build: apache
     container_name: web-apache
@@ -27,6 +28,6 @@ services:
 
 networks:
   nginx:
-    driver: nginx-driver
+    driver: bridge
   apache:
-    driver: apache-driver
+    driver: bridge
