@@ -1,7 +1,7 @@
 version: "3"
 services:
   nginx:
-    build: ./nginx
+    image: localhost:5000/web-nginx:latest
     container_name: web-nginx
     volumes:
     - ./html:/usr/share/nginx/html
@@ -13,8 +13,8 @@ services:
     mem_reservation: 128M
     cpus: 0.5
 
-  httpd:
-    build: apache
+  apache:
+    image: localhost:5000/web-apache:latest
     container_name: web-apache
     volumes:
     - ./html:/var/www/html/
