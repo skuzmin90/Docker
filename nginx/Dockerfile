@@ -7,6 +7,8 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+USER nginx
+
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
