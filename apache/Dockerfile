@@ -9,5 +9,5 @@ RUN apt-get update \
 
 COPY ./apache2.conf /etc/apache2/conf/apache2.conf
 
-EXPOSE 8081
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+EXPOSE 80
+CMD ["apache2", "-D", "FOREGROUND"]
