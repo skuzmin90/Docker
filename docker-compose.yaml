@@ -2,21 +2,31 @@ version: "3"
 services:
   nginx:
     build: ./nginx
-    container_name: webapp-nginx
+    container_name: web-nginx
     volumes:
     - ./html:/usr/share/nginx/html
     ports:
     - "8080:80"
+    networks:
+      - nginx
     mem_limit: 512m
     mem_reservation: 128M
     cpus: 0.5
   httpd:
     build: apache
-    container_name: webapp-apache
+    container_name: web-apache
     volumes:
     - ./html:/var/www/html/
     ports:
-    - "9090:80"
+    - "8081:80"
+    networks:
+      - apache
     mem_limit: 512m
     mem_reservation: 128M
     cpus: 0.5
+
+networks:
+  nginx:
+    driver: nginx-driver
+  apache:
+    driver: apache-driver
