@@ -9,6 +9,6 @@
 * git clone https://github.com/skuzmin90/Docker.git
 * cd Docker
 * chmod +x start.sh
-* start.sh
+* ./start.sh
 * Try to open localhost:8080 for nginx service and localhost:8081 - apache
 
